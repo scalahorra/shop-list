@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Registrate</h1>
+
+<div mat-dialog-content class="content">
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        [(ngModel)]="registerData.email"
+        matInput
+        required
+        email>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input
+      type="password"
+      [(ngModel)]="registerData.password"
+      matInput
+      required
+      minlength="6">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Repita Contraseña</mat-label>
+      <input
+      type="password"
+      [(ngModel)]="registerData.newPassword"
+      matInput
+      required
+      minlength="6">
+    </mat-form-field>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cerrar</button>
+  <button mat-flat-button color="primary" (click)="register()">Registrarse</button>
+</div>

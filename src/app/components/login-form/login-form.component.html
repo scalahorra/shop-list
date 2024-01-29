@@ -1,0 +1,40 @@
+<mat-card class="login-form-card">
+  <mat-card-content>
+    <h1>Inicia Sesión Con</h1>
+
+    <a
+      mat-flat-button
+      class="google-login"
+      href=""
+      target="_blank">
+      <div>
+        <img
+          class="icon-google"
+          src="../../../assets/icons/googleLogo.png"
+          alt="Logotipo de Google">
+        <p>Google</p>
+      </div>
+    </a>
+
+    <form [formGroup]="loginData" (ngSubmit)="onSubmit()">
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" id="email" formControlName="email" matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input type="password" id="password" formControlName="password" matInput>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">Iniciar Sesión</button>
+
+    </form>
+
+    <p>¿No estás registrado?
+      <button (click)="openRegistrationDialog()" mat-button>Registrate aquí</button>
+    </p>
+
+  </mat-card-content>
+</mat-card>
